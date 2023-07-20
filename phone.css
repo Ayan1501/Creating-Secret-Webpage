@@ -1,0 +1,39 @@
+/* Media Query for phone */
+
+    #title {
+        position: relative;
+        top: 0;
+    }
+    
+    #title::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     background-image: url("/Images/Title_background.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;opacity: 0.5;
+     z-index: -1;
+    }
+    #title ul {
+        display: flex;
+        padding: 1rem;
+        align-items: center;
+    
+    }
+    #title .logo{
+       position: relative;
+       left: 30vw;
+    }
+    .logo img {
+        height: 3rem;
+        width: 3rem;
+        margin: 0rem 5rem 0rem 2rem;
+    }
+    
+    #title li {
+        display: none;
+    }
+    
