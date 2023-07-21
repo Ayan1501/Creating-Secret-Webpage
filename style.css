@@ -5,7 +5,7 @@
 }
 
 /* Title Styling */
-#title {
+ #title {
     position: relative;
     top: 0;
 }
@@ -26,9 +26,10 @@
     display: flex;
     padding: 1rem;
     align-items: center;
+
 }
 
-#logo img {
+#title .logo img {
     height: 3rem;
     width: 3rem;
     margin: 0rem 5rem 0rem 2rem;
@@ -45,11 +46,113 @@ font-size: 20px;
 font-weight: bold;
 }
 
+#title li a:hover{
+    color: rgb(138, 18, 18);
+    opacity: 0.7;
+}
+
 #title button {
     margin-left: 35rem;
     text-decoration: none;
+    background-color: transparent;
+    border: none;
+   
 }
 
 #title button a {
     text-decoration: none;
+}
+#title button a:hover{
+    font-size: 20px;
+font-weight: bold;
+} 
+
+
+/* creating hamburger navbar */
+
+
+#hamburger{
+    width: 20%;
+    transition:  0.3s ease;
+}
+
+#hamburger ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25%;
+    background-image: url("/Images/Title_background.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    opacity: 0.5;
+    z-index: -1;
+   }
+#hamburger ul {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+}
+
+#hamburger .logo img {
+    height: 3rem;
+    width: 3rem;
+    margin: 2rem 5rem 6rem 5rem;
+    text-align: center;
+}
+.hamburgerIcon{
+    /* float: right; */
+    background-color: transparent;
+}
+#hamburger li {
+    list-style: none;
+    margin: 2rem 1rem;
+}
+#hamburger li a{
+text-decoration: none;
+}
+#hamburger button {
+    width: 2.9rem;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    margin: 2rem 1rem;
+}
+#hamburger button a{
+text-decoration: none;
+}
+
+/* body design */
+
+.background{
+    display:none;
+}
+.active{
+    overflow: hidden;
+    display: inline-block;
+}
+.background img{
+height: 70vh;
+width: 100vw;
+position:relative;
+z-index: -1;
+object-fit: cover;
+object-position: center;
+
+}
+.background  h1{
+    position: absolute;
+    top: 20vh;
+    left: 65vw;
+    color: white;
+   
+}
+.background p{
+    position: absolute;
+    top: 25vh;
+    left: 65vw;
+    color: white;
+   font-size: 20px; 
 }
